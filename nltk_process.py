@@ -6,10 +6,10 @@ import numpy as np
 def tokenize(sentence):
     return nltk.word_tokenize(sentence)
 
-def stem(word):
+def stem(word):#interested, interesting -> interest
     return PorterStemmer().stem(word.lower())
 
-def bag_words(tokenized_sentence, words):
+def bag_of_words(tokenized_sentence, words):
     """
     sentence = ["Good", "morning"]
     words = ["hello", "hi", "good", "thank", "you", "morning"]
@@ -21,3 +21,5 @@ def bag_words(tokenized_sentence, words):
         if word in tokenized_sentence:
             bag[idx] = 1.0
     return bag
+
+

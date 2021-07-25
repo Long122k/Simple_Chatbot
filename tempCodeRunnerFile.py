@@ -1,1 +1,3 @@
-X_train
+
+# print(tags)
+# print(words)
