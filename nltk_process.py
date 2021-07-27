@@ -12,8 +12,8 @@ def stem(word):#interested, interesting -> interest
 def bag_of_words(tokenized_sentence, words):
     """
     sentence = ["Good", "morning"]
-    words = ["hello", "hi", "good", "thank", "you", "morning"]
-    bag   = [   0,      0,      1,      0,      0,      1    ]
+    all_words =    ["hello", "hi", "good", "thank", "you", "morning"]
+    bag_of_words = [   0,      0,      1,      0,      0,      1    ]
     """
     tokenized_sentence = [stem(w) for w in tokenized_sentence]
     bag = np.zeros(len(words), dtype= np.float32)
@@ -21,5 +21,6 @@ def bag_of_words(tokenized_sentence, words):
         if word in tokenized_sentence:
             bag[idx] = 1.0
     return bag
+
 
 
